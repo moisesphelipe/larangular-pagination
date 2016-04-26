@@ -1,2 +1,2 @@
 # larangular-pagination
-An easy way to use pagination with Laravel and Angulars
+This is larangular pagination demo for more details change the branch for `master`
