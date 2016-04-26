@@ -9,7 +9,7 @@ You cand download all the files in zip or clone this repository
 You can also have an app like in the demo just changing the branch to Laravel-Example
 
 ##Configuration
-If you are using Laravel-Example provider in the branch, the only one thing that you need to do is, change the `.env` file configuration to your database settings.
+If you are using Laravel-Example provider in the branch, the only one thing that you need to do is, change the `.env` file configuration for your database settings.
 
 In order to use this in another project, you need to include the `pagination.css` file in your project and also the `pagination.directive.js` | `pagination.html`.
 
