@@ -2,6 +2,13 @@
 This is a simple pagination with Laravel and Angular. You can see the [demo here] (http://pagination-angular-laravel.esy.es/#/)
 
 ##Installation
+
+### npm
+
+```shell
+npm install larangular-pagination
+```
+
 You cand download all the files in zip or clone this repository
 ```
     git clone https://github.com/moisesphelipe/larangular-pagination.git
