@@ -1,0 +1,145 @@
+<md-button ui-sref="article-new" class="md-fab la-fab">
+			<i class="mdi mdi-border-color"></i>
+</md-button>
+
+<la-alert custom-class="la-alert-info">
+	<a link href="https://github.com/moisesphelipe/larangular-pagination.git">
+		This is an example of pagination with Angular and Laravel. For more details check it out on the github
+
+	</a>
+</la-alert>
+
+<md-whiteframe class="md-whiteframe-1dp" layout="column" flex="90">
+
+	<div class="widget widget-header article-actions" layout="row" layout-align="space-around center" layout-xs="column">
+
+        <md-input-container>
+			<label for="search">Search for articles</label>
+			<input type="search">
+			<md-icon icon=""><i class="glyphicon glyphicon-search"></i></md-icon>
+        </md-input-container>
+
+        <span flex></span>
+
+		<md-button ng-click="getArticles(pageAttr.currentPage)" class="md-icon-button">
+			<i class="mdi mdi-autorenew"></i>
+		</md-button>
+
+		<md-button ng-click="toggleArticlesSettings()" class="md-icon-button">
+			<i class="mdi mdi-settings"></i>
+		</md-button>
+
+
+    </div>
+
+
+	<div class="articles-filter" ng-hide="loading || !articles.length"  flex md-scroll-y role="main"  layout-align="space-around center" layout-wrap>
+
+		<span>Filter By:</span>
+
+		<!-- ====================================
+
+					 FILTER ARTICLES
+
+		========================================= -->
+
+		<md-input-container class="filter-input">
+
+			<label for="Tags">Tags</label>
+			<md-select ng-model="tag">
+				<md-option value="">All</md-option>
+	      		<md-option ng-repeat="tag in fakers.tags" value="{{tag.name}}">
+	        		{{tag.name}}
+	      		</md-option>
+	    	</md-select>
+		</md-input-container>
+
+
+		<md-input-container class="filter-input">
+
+			<label for="Author">Author</label>
+			<md-select ng-model="search.tags.name">
+	      		<md-option ng-repeat="author in fakers.authors" value="{{author.name}}">author</md-option>
+	    	</md-select>
+		</md-input-container>
+
+		<span flex></span>
+
+		<md-button class="md-raised md-warn">
+			<i class="glyphicon glyphicon-trash"></i>
+			Delete selected
+		</md-button>
+
+
+	</div>
+
+   	<!-- ====================================
+
+				ARTICLES TABLE (LIST)
+
+	========================================= -->
+
+   <div class="article-box">
+
+		<div ng-show="loading" class="loading-articles" layout layout-align="center center">
+			<md-progress-circular md-mode="indeterminate" md-diameter="80"></md-progress-circular>
+		</div>
+
+			<la-alert custom-class="la-alert-info" ng-hide="articles.length || loading">
+				Oops! It seems like, no articles were found for your search.
+			</la-alert>
+
+
+		<table class="table table-hover" ng-hide="loading  || !articles.length">
+
+			<thead>
+				<tr>
+					<th>
+						<md-checkbox class="article-checkbox"></md-checkbox>
+					</th>
+
+					<th>Title</th>
+					<th hide-xs>Author</th>
+					<th  hide-xs>tags</th>
+					<th>Status</th>
+					<th>Actions</th>
+				</tr>
+			</thead>
+
+			<tbody>
+
+				<tr  ng-repeat=" article in articles">
+					<th scope="row">
+						<md-checkbox></md-checkbox>
+					</th>
+					<td>{{article.title | limitWord}}</td>
+
+					<td hide-xs>Moises</td>
+
+					<td hide-xs><span>AngularJs, Laravel </span></td>
+
+					<td>{{article.status | articleStatusFilter}}</td>
+
+					<td style="display:inline-flex">
+						<md-button class="md-icon-button md-primary"  aria-label="Edit this article">
+        					<i class="glyphicon glyphicon-edit"></i>
+     					</md-button>
+						<md-button  class="md-icon-button md-warn" aria-label="Delete this article">
+        					<i class="glyphicon glyphicon-trash "></i>
+     				</md-button>
+
+					</td>
+
+				</tr>
+			</tbody>
+
+		</table>
+
+		<div ng-if="(!loading && pageAttr.lastPage > 1 && !searching )  ">
+			<la-pagination ng-hide="!articles.length" page-attr="{{pageAttr}}">
+			</la-pagination>
+		</div>
+
+    </div>
+
+</md-whiteframe>

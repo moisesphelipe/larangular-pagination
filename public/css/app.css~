@@ -1,0 +1,180 @@
+body,
+.page-content
+{
+    background: #eee !important;
+    padding-top: 10px;
+}
+md-whiteframe
+{
+    background: #fff !important;
+}
+
+
+/*========================================
+
+			ARTICLES
+
+========================================== */
+
+.article-actions
+{
+    max-height: 80px;
+    margin-bottom: 22px;
+    padding: 5px 20px !important;
+
+    align-items: inherit;
+}
+.article-actions i
+{
+    font-size: 20px ;
+}
+
+.article-actions .md-button
+{
+    margin-top: 18px;
+}
+
+.articles-filter
+{
+    display: flex;
+    flex-direction: row;
+
+    width: 100%;
+    padding: 15px;
+}
+.articles-filter .filter-input
+{
+    width: 25%;
+    margin: 0 8px;
+}
+.articles-filter .md-button
+{
+    height: 35px !important;
+    min-height: 20px !important;
+    padding: 0 9px;
+}
+
+
+.article-box
+{
+    width: 100%;
+    padding: 8px;
+}
+
+.article-checkbox
+{
+    margin-bottom: 0 !important;
+}
+
+.article-box .md-button
+{
+    width: 25px;
+    margin: 0;
+}
+
+
+.loading-articles
+{
+    padding: 40px !important;
+
+    text-align: center !important;
+}
+
+/*========================================
+
+				  HELPERS
+
+========================================== */
+
+.la-alert-info
+{
+    margin-bottom: 12px !important;
+
+    color: #f3f3f3;
+    border-color: #2196f3;
+    border-radius: 0;
+    background: #2196f3;
+}
+
+.la-alert-info a {
+	color: #fff !important;
+	text-decoration:none;
+}
+
+.la-fab
+{
+    position: fixed;
+    right: 32px;
+    bottom: 20px;
+}
+
+.la-fab i
+{
+    font-size: initial;
+    font-size: 22px;
+    line-height: 60px !important;
+}
+
+.alert i
+{
+    cursor: pointer;
+    display: none;
+}
+
+
+/* WIDGET */
+.widget
+{
+    width: 100%;
+    padding: 15px;
+
+    background: #fff;
+}
+
+.widget-header
+{
+    background: rgb(250,250,250);
+}
+
+.widget-body
+{
+    background: #fff !important;
+}
+.widget-footer
+{
+    background: #f3f3f3;
+}
+
+/* PAGINATION */
+
+.la-pagination
+{
+    list-style: none;
+}
+
+.la-pagination .active,
+.la-pagination .active:hover
+{
+    color: #fff !important;
+    background: rgb(33,150,243) !important;
+}
+.la-pagination .disabled
+{
+    pointer-events: none;
+}
+.la-pagination li
+{
+    display: inline;
+
+    margin-right: 12px !important;
+    padding: 5px 10px;
+
+    -webkit-transition: 700ms;
+
+    color: rgb(33,150,243);
+    border: none !important;
+}
+.la-pagination li:hover
+{
+    background: rgba(158,158,158,.2) !important;
+}
