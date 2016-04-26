@@ -32,6 +32,12 @@ Now it's Laravel time. Fortunately Laravel makes it easy. What you need to do is
 and then grab it in your Angular controller. Everything that you need here is the currentPage and the lastPage, you can remove all the other stuff if you want to.
 ![example4](https://cloud.githubusercontent.com/assets/18651154/14802502/a18b5d56-0b27-11e6-9516-0db948da6447.png)
 
+You can also limit how many page to show in the list, by default it is 9
+![example6](https://cloud.githubusercontent.com/assets/18651154/14805581/8da3e76a-0b43-11e6-9429-618a487212b7.png)
+
+If you are using Angular material you can chage this value in according to user's screen
+![example7](https://cloud.githubusercontent.com/assets/18651154/14805641/1882a650-0b44-11e6-96be-89b42dd84a93.png)
+
 ###Using in your app
 
 ```
