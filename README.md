@@ -30,7 +30,7 @@ and then grab it in your Angular controller. Everything that you need here is th
 ```
     <la-pagination ng-hide="!articles.length" page-attr="{{pageAttr}}"> 	</la-pagination>
 ```
-## DEMO SCREENSHOT
+## DEMO'S SCREENSHOT
 ![example1](https://cloud.githubusercontent.com/assets/18651154/14802093/f8a729ec-0b24-11e6-87dc-aa23f3f21d25.png)
 
 ![example2](https://cloud.githubusercontent.com/assets/18651154/14802117/2029c8da-0b25-11e6-86d0-4739b2cb32b0.png)
